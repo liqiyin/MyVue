@@ -1,0 +1,311 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: 0;
+}
+
+input {
+    outline: 0;
+}
+
+.main-container {
+    text-align: center;
+    height: 100%;
+    min-height: 720px;
+    white-space: nowrap;
+    margin-bottom: -42px;
+}
+
+div.main-container::before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.main-body {
+    margin: auto;
+    width: 300px;
+    min-height: 590px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    white-space: normal;
+    padding: 0;
+}
+
+.index-main-header {
+    text-align: center;
+}
+
+.index-main-header .logo {
+    margin: 0 auto;
+    width: 160px;
+    background-size: contain;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    height: 74px;
+}
+
+.hide-text {
+    color: transparent;
+    font-size: 0px;
+}
+
+.index-main-header .subtitle {
+    font-size: 18px;
+    line-height: 1;
+    color: #555;
+    margin: 30px 0 20px;
+    font-weight: 400;
+}
+
+.index-main-body {
+    text-align: center;
+    display: block;
+}
+
+.tab-nav-bars {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.tab-slides a {
+    width: 4em;
+    float: left;
+    color: #555;
+}
+
+.tab-slides {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-slide-bar {
+    width: 2.4em;
+    height: 2px;
+    background: #0f88eb;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 0.8em;
+}
+
+.input-box {
+    margin: auto;
+    float: none;
+    width: 300px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.group-inputs {
+    padding: 1px;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.input-wrapper {
+    border: 0px;
+    line-height: 19px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.input-wrapper.phone {
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.input-wrapper.account {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.login-box input {
+    padding: 1em 0.8em;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    font-size: 14px;
+    color: #555;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.submit-wrapper {
+    margin-top: 18px;
+}
+
+.sign-button {
+    width: 100%;
+    background: #0f88eb;
+    border: 0;
+    border-radius: 3px;
+    line-height: 41px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    box-shadow: none;
+    font-size: 15px;
+    padding: 0;
+}
+
+.agreement-tip {
+    font-size: 13px;
+    margin-top: 21px;
+    color: #999;
+}
+
+.agreement-tip a {
+    color: #698ebf;
+}
+
+.signin-misc {
+    margin-top: 10px;
+    padding: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.sign-button-phone {
+    font-size: 14px;
+    color: #5ca5e8;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.unable-login {
+    color: #555;
+    float: right;
+}
+
+.social-signup-wrapper {
+    text-align: left;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #555;
+}
+
+.sns-toggle {
+    font-size: 14px;
+    color: #787878;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.sns-buttons {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.sns-buttons a {
+    margin: 0 25px 0 0;
+    opacity: 0.7;
+}
+
+[class*=sprite-index-icon-] {
+    background-image: url('../img/icons.png');
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 76px 62px;
+    width: 20px;
+    height: 18px;
+    background-repeat: no-repeat;
+}
+
+.sprite-index-icon-wechat {
+    background-position: -56px -20px;
+}
+.sprite-index-icon-weibo {
+    background-position: -0px -44px;
+}
+.sprite-index-icon-qq {
+    background-position: -56px -0px;
+}
+
+.QRcode {
+    margin-top: 40px;
+    position: relative;
+}
+
+.QRcode-toggle-button {
+    border: 1px solid #96c2e9;
+    border-radius: 3px;
+    background: transparent;
+    width: 100%;
+    height: 41px;
+    display: block;
+    line-height: 39px;
+    cursor: pointer;
+    padding: 0;
+    color: #5fa6e5;
+    font-size: 14px;
+}
+
+.QRcode-card {
+    position: absolute;
+    left: -5px;
+    bottom: 68px;
+    width: 310px;
+    height: 310px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.15);
+    text-align: left;
+}
+
+.QRcode-image {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/qr-code.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.sprite-index-icon-arrow {
+    background-position: 0px 0px;
+    height: 42px;
+    width: 54px;
+    bottom: -14px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.active {
+    color: #0f88eb;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="../css/zhihu_login.css">
+</head>
+
+<body>
+<div class="main-container" id="app">
+  <div class="main-body">
+    <div class="index-main-header">
+      <h1 class="logo hide-text">知乎</h1>
+      <h2 class="subtitle">与世界分享你的知识、经验和见解</h2>
+    </div>
+    <div class="index-main-body">
+      <div class="tab-nav-bars">
+        <div class="tab-slides">
+          <a href="#signin" id="btn_regist" v-on:click="showSignIn">注册</a>
+          <a href="#signup" id="btn_login" v-on:click="showSignUp">登录</a>
+          <span class="nav-slide-bar"></span>
+        </div>
+      </div>
+      <div class="signin" id="signin_content">
+        <form action="" class="login-box">
+          <div class="group-inputs">
+            <div class="input-wrapper account">
+              <input type="text" name="account" placeholder="手机" required>
+            </div>
+            <div class="input-wrapper">
+              <input type="password" name="password" placeholder="密码" required>
+            </div>
+          </div>
+          <div class="submit-wrapper">
+            <button class="sign-button submit" type="submit">登录</button>
+          </div>
+        </form>
+        <div class="signin-misc clearfix">
+          <button class="sign-button-phone" type="button">手机验证码登录</button>
+          <a href="" class="unable-login">无法登录?</a>
+        </div>
+        <div class="social-signup-wrapper">
+          <span class="sns-toggle">社交账号登录</span>
+          <div class="sns-buttons">
+            <a href="#" title="微信登录" class="js-wechat">
+              <i class="sprite-index-icon-wechat"></i>
+            </a>
+            <a href="#" title="微博登录" class="js-weibo">
+              <i class="sprite-index-icon-weibo"></i>
+            </a>
+            <a href="#" title="QQ登录" class="js-qq">
+              <i class="sprite-index-icon-qq"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="signup" style="display: none" id="signup_content">
+        <form action="" class="login-box">
+          <div class="group-inputs">
+            <div class="input-wrapper name">
+              <input type="text" name="fullname" placeholder="姓名" required>
+            </div>
+            <div class="input-wrapper phone">
+              <input type="text" name="phone_num" placeholder="手机" required>
+            </div>
+            <div class="input-wrapper">
+              <input type="password" name="password" placeholder="密码" required>
+            </div>
+          </div>
+          <div class="submit-wrapper">
+            <button class="sign-button submit" type="submit">注册知乎</button>
+          </div>
+          <p class="agreement-tip">
+            点击「注册」按钮，即代表你同意
+            <a href="" target="_blank">《知乎协议》</a>
+          </p>
+        </form>
+      </div>
+
+      <div class="QRcode">
+        <button class="QRcode-toggle-button" id="qrcode-toggle">下载知乎 App</button>
+        <div class="QRcode-card" style="display: none" id="qrcode-content">
+          <div class="QRcode-image"></div>
+          <div class="sprite-index-icon-arrow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    // 创建一个 Vue 实例或 "ViewModel"
+    // 它连接 View 与 Model
+    new Vue({
+        el: '#app',
+        data: {},
+        methods: {
+            showSignUp: function (event) {
+              $("#signup_content").show();
+              $("#signin_content").hide();
+            },
+            showSignIn: function (event) {
+              $("#signup_content").hide();
+              $("#signin_content").show();
+            }
+        },
+        delimiters: ['${', '}']
+    });
+</script>
+</html>

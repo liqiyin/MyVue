@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+
+<body>
+<!--这是我们的View-->
+<div id="app">
+    <!--express-->
+    <!--{{message}}-->
+    <!--vue.js-->
+    <button @click="addPeople">Add</button>
+    <div class="form-group">
+      <label>名字</label>
+      <input type="text" v-model="people"/>
+    </div>
+    <div v-for="person in peopleList">
+      <p>${person.name}</p>
+    </div>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    // 创建一个 Vue 实例或 "ViewModel"
+    // 它连接 View 与 Model
+    new Vue({
+        el: '#app',
+        data: {
+          people: "",
+          peopleList: []
+        },
+        methods: {
+          addPeople: function () {
+            var newPerson = {name: this.people};
+            this.peopleList.push(newPerson);
+          }
+        },
+        delimiters: ['${', '}']
+    })
+</script>
+</html>
