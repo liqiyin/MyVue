@@ -12,7 +12,7 @@ app.use('/', router);
 
 app.use(express.static('public'));
 app.listen(3000);
-
+console.log("listen 3000")
 nunjucks.configure('views', {
     autoescape: true,
     express: app
