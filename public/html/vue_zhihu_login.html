@@ -8,7 +8,8 @@
 </head>
 
 <body>
-<div class="main-container" id="app">
+<div id="app" class="main-container">
+  <div class="main-cover" v-on:click="showQrCode" v-if="isShowQrCode"></div>
   <div class="main-body">
     <div class="index-main-header">
       <h1 class="logo hide-text">知乎</h1>
@@ -22,7 +23,7 @@
           <span class="nav-slide-bar"></span>
         </div>
       </div>
-      <div class="signin" id="signin_content">
+      <div class="signin" id="signin_content" v-if="isShowSignIn">
         <form action="" class="login-box">
           <div class="group-inputs">
             <div class="input-wrapper account">
@@ -55,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="signup" style="display: none" id="signup_content">
+      <div class="signup" id="signup_content" v-else>
         <form action="" class="login-box">
           <div class="group-inputs">
             <div class="input-wrapper name">
@@ -79,32 +80,36 @@
       </div>
 
       <div class="QRcode">
-        <button class="QRcode-toggle-button" id="qrcode-toggle">下载知乎 App</button>
-        <div class="QRcode-card" style="display: none" id="qrcode-content">
+        <button class="QRcode-toggle-button" id="qrcode-toggle" v-on:click="showQrCode">下载知乎 App</button>
+        <div class="QRcode-card" id="qrcode-content" v-if="isShowQrCode">
           <div class="QRcode-image"></div>
           <div class="sprite-index-icon-arrow"></div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
 </body>
 <script src="../js/vue.js"></script>
-<script src="../js/jquery.min.js"></script>
 <script>
     // 创建一个 Vue 实例或 "ViewModel"
     // 它连接 View 与 Model
     new Vue({
         el: '#app',
-        data: {},
+        data: {
+            isShowSignIn: true,
+            isShowQrCode: false
+        },
         methods: {
-            showSignUp: function (event) {
-              $("#signup_content").show();
-              $("#signin_content").hide();
+            showSignIn: function () {
+                this.isShowSignIn = true;
             },
-            showSignIn: function (event) {
-              $("#signup_content").hide();
-              $("#signin_content").show();
+            showSignUp: function () {
+                this.isShowSignIn = false;
+            },
+            showQrCode: function () {
+                this.isShowQrCode = !this.isShowQrCode;
             }
         },
         delimiters: ['${', '}']

@@ -30,7 +30,7 @@ input {
     margin-bottom: -42px;
 }
 
-div.main-container::before{
+div.main-container::before {
     content: '';
     display: inline-block;
     height: 100%;
@@ -46,6 +46,19 @@ div.main-container::before{
     text-align: left;
     white-space: normal;
     padding: 0;
+}
+
+.main-cover {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
 }
 
 .index-main-header {
@@ -150,11 +163,11 @@ div.main-container::before{
 }
 
 .clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 .submit-wrapper {
@@ -168,7 +181,7 @@ div.main-container::before{
     border-radius: 3px;
     line-height: 41px;
     color: #fff;
-    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     box-shadow: none;
     font-size: 15px;
     padding: 0;
@@ -244,9 +257,11 @@ div.main-container::before{
 .sprite-index-icon-wechat {
     background-position: -56px -20px;
 }
+
 .sprite-index-icon-weibo {
     background-position: -0px -44px;
 }
+
 .sprite-index-icon-qq {
     background-position: -56px -0px;
 }
@@ -278,7 +293,7 @@ div.main-container::before{
     height: 310px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,.15);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
     text-align: left;
 }
 
@@ -295,6 +310,7 @@ div.main-container::before{
     background-position: center;
     background-size: contain;
 }
+
 .sprite-index-icon-arrow {
     background-position: 0px 0px;
     height: 42px;
