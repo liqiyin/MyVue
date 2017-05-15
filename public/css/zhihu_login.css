@@ -101,7 +101,6 @@ div.main-container::before {
 .tab-slides a {
     width: 4em;
     float: left;
-    color: #555;
 }
 
 .tab-slides {
@@ -324,4 +323,8 @@ div.main-container::before {
 
 .active {
     color: #0f88eb;
+}
+
+.inactive {
+    color: #555;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -18,12 +18,12 @@
     <div class="index-main-body">
       <div class="tab-nav-bars">
         <div class="tab-slides">
-          <a href="#signin" id="btn_regist" v-on:click="showSignIn">注册</a>
-          <a href="#signup" id="btn_login" v-on:click="showSignUp">登录</a>
+          <a href="#signup" id="btn_login" v-on:click="showSignUp" v-bind:class="{'active': !isShowSignIn, 'inactive': isShowSignIn}">登录</a>
+          <a href="#signin" id="btn_regist" v-on:click="showSignIn" v-bind:class="{'active': isShowSignIn, 'inactive': !isShowSignIn}">注册</a>
           <span class="nav-slide-bar"></span>
         </div>
       </div>
-      <div class="signin" id="signin_content" v-if="isShowSignIn">
+      <div class="signin" id="signin_content" v-if="!isShowSignIn">
         <form action="" class="login-box">
           <div class="group-inputs">
             <div class="input-wrapper account">
@@ -88,7 +88,6 @@
       </div>
     </div>
   </div>
-
 </div>
 </body>
 <script src="../js/vue.js"></script>
@@ -98,7 +97,7 @@
     new Vue({
         el: '#app',
         data: {
-            isShowSignIn: true,
+            isShowSignIn: false,
             isShowQrCode: false
         },
         methods: {
