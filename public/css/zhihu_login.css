@@ -21,6 +21,9 @@ button {
 input {
     outline: 0;
 }
+[v-cloak] {
+    display: none;
+}
 
 .main-container {
     text-align: center;

@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title></title>
+  <title>我的测试知乎</title>
   <link rel="stylesheet" href="../css/zhihu_login.css">
+  <script src="../js/vue.js"></script>
 </head>
 
 <body>
@@ -56,7 +57,7 @@
           </div>
         </div>
       </div>
-      <div class="signup" id="signup_content" v-else>
+      <div v-cloak class="signup" id="signup_content" v-else>
         <form action="" class="login-box">
           <div class="group-inputs">
             <div class="input-wrapper name">
@@ -90,7 +91,6 @@
   </div>
 </div>
 </body>
-<script src="../js/vue.js"></script>
 <script>
     // 创建一个 Vue 实例或 "ViewModel"
     // 它连接 View 与 Model
